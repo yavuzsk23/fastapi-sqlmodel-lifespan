@@ -40,6 +40,8 @@ Then open `http://127.0.0.1:8000` in your browser, or visit `http://127.0.0.1:80
 ### How it works
 The `@asynccontextmanager`-decorated `lifespan` function runs `SQLModel.metadata.create_all(engine)` before the `yield` statement — this executes once, when the application starts, creating all tables for models like `Item`. Any code placed after `yield` runs on shutdown, making this the ideal place for cleanup logic such as closing database connections.
 
+Note: This project was developed with AI assistance as part of my learning process
+
 ---
 
 ## 🇩🇪 Deutsch
@@ -74,6 +76,8 @@ uvicorn fastapi_lifespan:app --reload
 ### Funktionsweise
 Die mit `@asynccontextmanager` versehene `lifespan`-Funktion führt `SQLModel.metadata.create_all(engine)` vor der `yield`-Anweisung aus — dies geschieht einmalig beim Start der Anwendung und erstellt alle Tabellen für Modelle wie `Item`. Jeglicher Code nach `yield` wird beim Herunterfahren ausgeführt, was diesen Bereich zum idealen Ort für Aufräumlogik wie das Schließen von Datenbankverbindungen macht.
 
+Hinweis: Dieses Projekt wurde im Rahmen meines Lernprozesses mit KI-Unterstützung entwickelt
+
 ---
 
 ## 🇹🇷 Türkçe
@@ -107,3 +111,6 @@ Ardından tarayıcında `http://127.0.0.1:8000` adresini aç, ya da interaktif A
 
 ### Nasıl çalışır?
 `@asynccontextmanager` ile işaretlenmiş `lifespan` fonksiyonu, `yield` ifadesinden önce `SQLModel.metadata.create_all(engine)` komutunu çalıştırır — bu, uygulama başladığında bir kez çalışır ve `Item` gibi modeller için tüm tabloları oluşturur. `yield` sonrasına yerleştirilen herhangi bir kod, kapanış sırasında çalışır; bu da veritabanı bağlantılarını kapatmak gibi temizlik işlemleri için ideal bir yerdir.
+
+Not: Bu proje öğrenme sürecimin bir parçası olarak yapay zeka desteğiyle geliştirilmiştir
+
